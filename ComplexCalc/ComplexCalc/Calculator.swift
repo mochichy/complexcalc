@@ -11,6 +11,7 @@ import Foundation
 // All your work will go in here
 class Calculator {
     
+    // array part
     public func add(_ input: [Int]) -> Int {
         var res = 0
         for n in input {
@@ -38,17 +39,7 @@ class Calculator {
     }
     
     
-    /*public func add(_ input: [String:Int]) -> Int {
-        var res = 0
-        for(_, value) in input {
-            res = res + value
-        }
-        return res
-    }*/
-    
-    /*public func avg(_ input: [String:Int]) -> Int {
-        
-    }*/
+    // first part
     
     public func add(lhs : Int, rhs : Int) -> Int {
         return lhs + rhs
@@ -65,6 +56,29 @@ class Calculator {
     public func divide(lhs : Int, rhs : Int) -> Int {
         return lhs / rhs
     }
+    
+    
+    // tuple part
+    
+    public func add(lhs : (Int, Int), rhs : (Int, Int)) -> (Int, Int) {
+        var result = (0, 0)
+        result.0 = lhs.0 + rhs.0
+        result.1 = lhs.1 + rhs.1
+        
+        return result
+    }
+    
+    public func subtract(lhs : (Int, Int), rhs : (Int, Int)) -> (Int, Int) {
+        var result = (0, 0)
+        result.0 = lhs.0 - rhs.0
+        result.1 = lhs.1 - rhs.1
+        
+        return result
+    }
+    
+    
+    
+    
     
     
     

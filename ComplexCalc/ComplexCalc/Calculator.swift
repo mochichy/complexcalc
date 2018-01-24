@@ -77,6 +77,32 @@ class Calculator {
     }
     
     
+    // map part
+    
+    public func add(lhs : [String: Int], rhs : [String: Int]) -> [String: Int]{
+        var result = [String: Int]()
+        result["x"] = lhs["x"]! + rhs["x"]!
+        result["y"] = lhs["y"]! + rhs["y"]!
+        return result
+    }
+    
+    public func subtract(lhs : [String: Int], rhs : [String: Int]) -> [String: Int]{
+        var result = [String: Int]()
+        result["x"] = lhs["x"]! - rhs["x"]!
+        result["y"] = lhs["y"]! - rhs["y"]!
+        return result
+    }
+    
+    
+    // math op
+    
+    public func mathOp(lhs : Int, rhs : Int, op : (Int, Int) -> Int) ->Int {
+        var res = 0
+        res = op(lhs, rhs)
+        return res
+    }
+    
+    
     
     
     

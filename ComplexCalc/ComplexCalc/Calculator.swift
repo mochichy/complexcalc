@@ -102,6 +102,14 @@ class Calculator {
         return res
     }
     
+    // math op 2
+    public func mathOp(args : [Int], beg: Int, op : (Int, Int) -> Int) ->Int {
+        var res = op(beg, args[0])
+        for index in 1...(args.count - 1) {
+            res = op(res, args[index])
+        }
+        return res
+    }
     
     
     
